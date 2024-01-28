@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base
+#nameSuffix: -dev
+namespace: kustom-dev
+commonLabels:
+  oper_env: dev
+patches:
+  - path: deployment.yaml
+    target:
+      kind: Deployment
+      labelSelector: "app=apiimg"
+  - patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 2
+      - op: add
+        path: /spec/revisionHistoryLimit
+        value: 5
+      
+    target:
+      kind: Deployment
+      labelSelector: "app=apiimg"
+
+images:
+- name: quay.io/rhdevelopers/bgd:1.0.0
+  newTag: latest
