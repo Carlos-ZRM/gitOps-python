@@ -22,5 +22,5 @@ spec:
             memory: 600Mi
         env:
         - name: COLOR
-          value: "red"
+          value: "green"
 
