@@ -24,5 +24,5 @@ patches:
       labelSelector: "app=apiimg"
 
 images:
-- name: quay.io/rhdevelopers/bgd:1.0.0
+- name: quay.io/rhdevelopers/bgd:default
   newTag: latest
