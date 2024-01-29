@@ -24,4 +24,4 @@ patches:
 
 images:
 - name: quay.io/rhdevelopers/bgd:default
-  newTag: 1.0.0
+  newTag: latest
