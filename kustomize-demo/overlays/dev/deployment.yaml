@@ -22,4 +22,4 @@ spec:
             memory: 300Mi
         env:
         - name: COLOR
-          value: "yellow"
+          value: "green"
