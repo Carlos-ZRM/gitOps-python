@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - ../../base
 #nameSuffix: -dev
-namespace: kustom-dev
+#namespace: kustom-dev
 commonLabels:
   oper_env: dev
 patches:
